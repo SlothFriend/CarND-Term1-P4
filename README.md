@@ -28,6 +28,30 @@ The pre-step, calibrating the camera, is performed only once (assuming all the i
 
 ### Undistort the Image
 
-Now that the camera has been calibrated, all the hard work is done here. We simply need to apply that knowledge gained to undistort images. This is important because it will restore the straightness of lines, helping to identify lane lines later in the pipeline. The following image is the same as above, but undistorted. The bent lines are now straight.
+Now that the camera has been calibrated, all the hard work is done here. We simply need to apply that knowledge gained to undistort images. This is important because it will restore the straightness of lines, helping to identify lane lines later in the pipeline. The difference between the distorted and undistorted images is clear. The bent lines are now straight.
 
-![Undistorted Checkerboard Image]()
+Distorted | Undistorted
+:---: | :---:
+![Distorted Checkerboard Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/camera_cal_images/not_enough_corners/calibration1.jpg) | ![Undistorted Checkerboard Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/undistorted_checkerboard.jpg)
+
+### Threshold the Image
+
+Thresholding is a method of narrowing down the pixels we are interested in. This can be done using a combination of gradient and color filters. Here's what a thresholded image looks like.
+
+Original | Thresholded
+:---: | :---:
+![Original Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/test_images/test2.jpg) | ![Thresholded Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/threshold_test2.jpg)
+
+### Perspective Transform
+
+While undistorting and thresholding help isolate the important information, we can further isolate that information by looking only at the portion of the image we care about - the road. To focus in on the road portion of the image we shift our perspective to a top-down view of the road in front of the car.
+
+Thresholded - Normal Perspective | Thresholded - Top-Down Perspective
+:---: | :---:
+![Thresholded Image in Normal Perspective](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/threshold_test2.jpg) | ![Thresholded Image in Top-Down Perspective](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/warped_threshold_test2.jpg)
+
+### Identify the Lane Lines
+
+From the top-down perspective it's much easier to identify the lane lines. Lane curvature is also much easier to calculate. Here is an image showing the lane lines identified by a sliding window search. Best-fit lines are also shown in yellow for each lane line (these will be used to calculate lane curvature).
+
+![Lane Lines Identified in Warped Thresholded Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/lane_detection_warped_test2.jpg)
