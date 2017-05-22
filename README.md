@@ -28,7 +28,7 @@ The pre-step, calibrating the camera, is performed only once (assuming all the i
 
 ### Undistort the Image
 
-Now that the camera has been calibrated, all the hard work is done here. We simply need to apply that knowledge gained to undistort images. This is important because it will restore the straightness of lines, helping to identify lane lines later in the pipeline. The difference between the distorted and undistorted images is clear. The bent lines are now straight.
+With the camera calibrated, we simply need to apply the knowledge gained to undistort images. This is important because it will restore the straightness of lines, helping to identify lane lines later in the pipeline. The difference between the distorted and undistorted images is clear. The bent lines are now straight.
 
 Distorted | Undistorted
 :---: | :---:
