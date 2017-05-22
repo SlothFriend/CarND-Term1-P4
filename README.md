@@ -16,7 +16,7 @@ The lane-detection pipeline consists of the following steps:
 3. Threshold the image using gradients and colors
 4. Apply a perspective transform to view the image from top-down
 5. Identify the lane lines in warped image
-6. Un-transform back to orginal perspective and draw lane and lines
+6. Draw onto the original image
 
 The pre-step, calibrating the camera, is performed only once (assuming all the images are taken from the same camera). All the other steps are performed on each image.
 
@@ -55,3 +55,17 @@ Thresholded - Normal Perspective | Thresholded - Top-Down Perspective
 From the top-down perspective it's much easier to identify the lane lines. Lane curvature is also much easier to calculate. Here is an image showing the lane lines identified by a sliding window search. Best-fit lines are also shown in yellow for each lane line (these will be used to calculate lane curvature).
 
 ![Lane Lines Identified in Warped Thresholded Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/lane_detection_warped_test2.jpg)
+
+### Drawing onto the Original Image
+
+Finally, we take all this information we gathered and draw the results back onto the original image. The calculated right/left lane curvature and center-lane offset are shown in the top-left of the image.
+
+![Final Image with Lane Identified](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/final.jpg)
+
+## Applying the Pipeline to Videos
+
+At the end of [pipeline.ipynb](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/pipeline.ipynb) is some simple code that processes videos using this lane-detection pipeline. My final video output for three different videos can be found on YouTube here:
+
+* [Project Video](https://www.youtube.com/watch?v=v_leQokpNnU)
+* [Challenge Video](https://www.youtube.com/watch?v=YIfH7aO-D_4)
+* [Harder Challenge Video](https://www.youtube.com/watch?v=3lMie0rdx4E)
