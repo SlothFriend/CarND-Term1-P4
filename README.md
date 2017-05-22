@@ -52,7 +52,7 @@ Thresholded - Normal Perspective | Thresholded - Top-Down Perspective
 
 ### Identify the Lane Lines
 
-From the top-down perspective it's much easier to identify the lane lines. Lane curvature is also much easier to calculate. Here is an image showing the lane lines identified by a sliding window search. Best-fit lines are also shown in yellow for each lane line (these will be used to calculate lane curvature).
+From the top-down perspective it's much easier to identify the lane lines. Lane curvature is also much easier to calculate. Here is an image showing the lane lines identified by a sliding window search.
 
 ![Lane Lines Identified in Warped Thresholded Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/example_images/lane_detection_warped_test2.jpg)
 
