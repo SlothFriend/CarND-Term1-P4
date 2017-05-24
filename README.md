@@ -6,6 +6,7 @@ In this project (#4 in Udacity's SDCND) I develop a pipeline to detect the road 
 
 If you want to toy with the code, it's all in [pipeline.ipynb](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/pipeline.ipynb). The code is well-documented and there's lots of supporting text to walk you through the notebook. [Make sure you get all the dependencies installed. My repo of [Udacity's starter](https://github.com/SealedSaint/CarND-Term1-Starter) might help.] 
 
+A Medium write-up of this project can be found [here](https://medium.com/@SealedSaint/advanced-lane-detection-for-self-driving-cars-9579e1f057ef).
 
 ## Overview: The Pipeline
 
