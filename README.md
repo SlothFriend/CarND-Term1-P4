@@ -22,7 +22,7 @@ The pre-step, calibrating the camera, is performed only once (assuming all the i
 
 ### Calibrate the Camera
 
-"Calibrating the camera" really means accounting for the distortion in an image introduced by the camera's lens. This is done using multiple images of checkerboard patters, which should have stright lines. Examining how the checkerboard patterns are distorted allows us to precisely identify how the camera lens is distoring images - which means we can undistort them.
+"Calibrating the camera" really means accounting for the distortion in an image introduced by the camera's lens. This is done using multiple images of checkerboard patters, which should have straight lines. Examining how the checkerboard patterns are distorted allows us to precisely identify how the camera lens is distorting images - which means we can undistort them.
 
 ![Distorted Checkerboard Image](https://github.com/SealedSaint/CarND-Term1-P4/blob/master/camera_cal_images/not_enough_corners/calibration1.jpg)
 
